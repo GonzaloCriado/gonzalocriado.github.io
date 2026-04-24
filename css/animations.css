@@ -1,0 +1,34 @@
+/* =========================================================
+   KEYFRAMES
+========================================================= */
+
+/* hero entrance — page load stagger */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* underline del hero CTA */
+@keyframes underlineIn {
+  to { transform: scaleX(1); }
+}
+
+/* ticker marquee */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* nav items — caen desde arriba con spring */
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,98 @@
+/* =========================================================
+   HERO SECTION
+========================================================= */
+#hero {
+  min-height: 100vh;
+  padding: 8vw;
+  /* 37px ticker + ~66px nav = ~103px de elementos fijos en el top */
+  padding-top: calc(8vw + 103px);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-location {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 13vw, 13vw);
+  font-weight: 700;
+  line-height: 0.92;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+.hero-name-line1 {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.hero-name-line2 {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.hero-role {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+  position: relative;
+}
+
+.hero-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+  transform-origin: left;
+  animation: underlineIn 0.5s ease 1.2s forwards;
+  transform: scaleX(0);
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 6vw;
+    padding-top: calc(6vw + 115px);
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+}

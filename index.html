@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gonzalo Criado — Front-end Developer & UX/UI Designer</title>
+  <meta name="description" content="Gonzalo Criado. Desarrollador Front-end & Diseñador UX/UI. Córdoba, Argentina." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- =========================================================
+       TICKER
+  ========================================================= -->
+  <div class="ticker" aria-label="Información de presentación">
+    <div class="ticker-track">
+      <span>Gonzalo Criado <span class="sep">✦</span> Front-end Developer <span class="sep">✦</span> Córdoba, Argentina <span class="sep">✦</span> UX/UI Designer <span class="sep">✦</span> React JS <span class="sep">✦</span> HTML · CSS · JS <span class="sep">✦</span> Python <span class="sep">✦</span> Open to work <span class="sep">✦</span></span>
+      <span>Gonzalo Criado <span class="sep">✦</span> Front-end Developer <span class="sep">✦</span> Córdoba, Argentina <span class="sep">✦</span> UX/UI Designer <span class="sep">✦</span> React JS <span class="sep">✦</span> HTML · CSS · JS <span class="sep">✦</span> Python <span class="sep">✦</span> Open to work <span class="sep">✦</span></span>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
+  <nav id="mainNav" aria-label="Navegación principal">
+    <a href="#hero" class="nav-logo">GC</a>
+    <ul class="nav-links">
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true">
+    <a href="#trabajos" class="overlay-link">Trabajos</a>
+    <a href="#stack" class="overlay-link">Stack</a>
+    <a href="#about" class="overlay-link">About</a>
+    <a href="#experiencia" class="overlay-link">Experiencia</a>
+    <a href="#contacto" class="overlay-link">Contacto</a>
+  </div>
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+  <section id="hero" aria-label="Presentación">
+    <div class="hero-content">
+      <p class="hero-location">en Córdoba, Argentina</p>
+      <span class="hero-name" aria-label="Gonzalo Criado">
+        <span class="hero-name-line1">Gonzalo</span>
+        <span class="hero-name-line2">Criado</span>
+      </span>
+      <p class="hero-role">Desarrollador Front-end &amp; UX/UI Designer</p>
+      <a href="#trabajos" class="hero-cta">Scrolleá &amp; descubrí ↓</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TRABAJOS SELECCIONADOS
+  ========================================================= -->
+  <section id="trabajos" aria-label="Trabajos seleccionados">
+    <div class="works-header reveal">
+      <p class="section-label">Trabajos Seleccionados</p>
+    </div>
+
+    <div class="works-grid">
+
+      <!-- 01 — Featured -->
+      <article class="work-card featured reveal" tabindex="0" aria-label="Estudio Digital">
+        <div class="card-bg" style="background: linear-gradient(135deg, #1c1008 0%, #0f0a05 60%, #0a0a0a 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">01</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">Diseño Web</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">Redes</span>
+            <span class="tag">Full-stack</span>
+          </div>
+          <h2 class="card-title">Estudio Digital</h2>
+          <p class="card-desc">Emprendimiento propio de servicios digitales. Diseño web, sistemas UX/UI y redes sociales. 30+ proyectos, 20+ clientes, 3 años.</p>
+          <p class="card-sublabel">estudiodigital.org</p>
+          <p class="card-year">2023 — Presente</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+      <!-- 02 -->
+      <article class="work-card reveal" tabindex="0" aria-label="Landing Escribanía">
+        <div class="card-bg" style="background: linear-gradient(135deg, #0e1218 0%, #080c10 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">02</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">UX/UI</span>
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Mobile</span>
+          </div>
+          <h2 class="card-title">Landing Escribanía</h2>
+          <p class="card-desc">Diseño y desarrollo web para escribanía cordobesa. +38% consultas.</p>
+          <p class="card-year">2025</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+      <!-- 03 -->
+      <article class="work-card reveal" tabindex="0" aria-label="Landing Inmobiliaria">
+        <div class="card-bg" style="background: linear-gradient(135deg, #100e18 0%, #0a0a0f 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">03</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">React</span>
+            <span class="tag">UX/UI</span>
+            <span class="tag">SEO</span>
+          </div>
+          <h2 class="card-title">Landing Inmobiliaria</h2>
+          <p class="card-desc">Integración de experiencia 360° para inmobiliaria local. +29% leads.</p>
+          <p class="card-year">2025</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+      <!-- 04 -->
+      <article class="work-card reveal" tabindex="0" aria-label="Sistema de Gestión Cotillón POP">
+        <div class="card-bg" style="background: linear-gradient(135deg, #141008 0%, #0c0b08 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">04</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">Dashboard</span>
+            <span class="tag">Flujos</span>
+            <span class="tag">Roles</span>
+            <span class="tag">JS</span>
+          </div>
+          <h2 class="card-title">Sistema de Gestión</h2>
+          <p class="card-desc">Dashboard interno para stock, compras y ventas con módulos admin/usuario. 4x productividad. Primer proyecto freelance.</p>
+          <p class="card-sublabel">Cotillón POP</p>
+          <p class="card-year">2021 / 2024</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+      <!-- 05 -->
+      <article class="work-card reveal" tabindex="0" aria-label="Identidad Visual Redes Sociales">
+        <div class="card-bg" style="background: linear-gradient(135deg, #100c14 0%, #0a0a0c 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">05</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">Social Media</span>
+            <span class="tag">Feed</span>
+            <span class="tag">Diseño Gráfico</span>
+          </div>
+          <h2 class="card-title">Identidad Visual</h2>
+          <p class="card-desc">Sistema de piezas visuales para marcas locales. 30+ piezas entregadas.</p>
+          <p class="card-year">2024 – 2025</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+      <!-- 06 -->
+      <article class="work-card reveal" tabindex="0" aria-label="Portfolio y Marca Personal">
+        <div class="card-bg" style="background: linear-gradient(135deg, #140f0a 0%, #0c0a08 100%);"></div>
+        <div class="card-overlay"></div>
+        <span class="card-number">06</span>
+        <div class="card-content">
+          <div class="card-tags">
+            <span class="tag">Portfolio</span>
+            <span class="tag">Branding</span>
+            <span class="tag">Performance</span>
+          </div>
+          <h2 class="card-title">Portfolio &amp; Marca Personal</h2>
+          <p class="card-desc">Identidad digital personal + portfolio. 100% performance Lighthouse.</p>
+          <p class="card-year">2025</p>
+        </div>
+        <span class="card-cta">→ Ver proyecto</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       STACK / HABILIDADES
+  ========================================================= -->
+  <section id="stack" aria-label="Habilidades técnicas">
+    <div class="stack-header reveal">
+      <p class="section-label">Herramientas &amp; Tecnologías</p>
+      <h2 class="section-title">Stack</h2>
+      <p class="stack-subtitle">Herramientas con las que trabajo</p>
+    </div>
+
+    <div class="skills-grid reveal">
+      <span class="skill-pill lg accent">HTML5</span>
+      <span class="skill-pill lg accent">CSS3</span>
+      <span class="skill-pill lg">JavaScript</span>
+      <span class="skill-pill lg">React JS</span>
+      <span class="skill-pill lg accent">Figma</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">SASS</span>
+      <span class="skill-pill">Bootstrap</span>
+      <span class="skill-pill">Angular</span>
+      <span class="skill-pill">Git &amp; GitHub</span>
+      <span class="skill-pill">VS Code</span>
+      <span class="skill-pill">Canva</span>
+      <span class="skill-pill">Proxmox</span>
+      <span class="skill-pill">Gitea</span>
+      <span class="skill-pill">GLPI</span>
+      <span class="skill-pill">APIs REST</span>
+      <span class="skill-pill">Diseño Responsivo</span>
+      <span class="skill-pill">IA &amp; Automatización</span>
+      <span class="skill-pill">Bases de datos</span>
+      <span class="skill-pill">ERP</span>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+  <section id="about" aria-label="Sobre mí">
+    <p class="about-label reveal">Sobre mí</p>
+    <div class="about-grid">
+
+      <div class="about-text">
+        <div class="reveal">
+          <p>Empecé con Photoshop y Robótica a los 14 años.<br>Desde entonces no paré.</p>
+        </div>
+        <div class="reveal">
+          <p>Hoy tengo 23, estudio Análisis de Sistemas en IES y trabajo en <strong>Interfile</strong> haciendo desarrollo web y soporte de sistemas. En paralelo, llevo adelante <strong>Estudio Digital</strong>, mi emprendimiento de diseño y desarrollo.</p>
+        </div>
+        <div class="reveal">
+          <p>Me formé en Desarrollo Web Fullstack, React JS, JavaScript y Python en Coderhouse. Aprendo todos los días. Leo mucho. Pienso más.</p>
+        </div>
+        <div class="reveal">
+          <p>No busco solo ejecutar código — busco entender el problema, diseñar la solución y construirla bien.</p>
+        </div>
+      </div>
+
+      <div class="about-visual reveal">
+        <div class="about-avatar">
+          <span class="about-initials">GC</span>
+          <span class="about-deco" aria-hidden="true">23</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EXPERIENCIA
+  ========================================================= -->
+  <section id="experiencia" aria-label="Experiencia laboral">
+    <div class="exp-header reveal">
+      <p class="section-label">Experiencia</p>
+    </div>
+
+    <div class="exp-table" role="list">
+      <div class="exp-row reveal" role="listitem">
+        <span class="exp-company">Interfile</span>
+        <span class="exp-role">Área de Sistemas / Dev Front-end</span>
+        <span class="exp-period">2024 — Presente</span>
+      </div>
+      <div class="exp-row reveal" role="listitem">
+        <span class="exp-company">Estudio Digital</span>
+        <span class="exp-role">Founder &amp; Developer</span>
+        <span class="exp-period">2023 — Presente</span>
+      </div>
+      <div class="exp-row reveal" role="listitem">
+        <span class="exp-company">POP Cotillón</span>
+        <span class="exp-role">Desarrollador Web Freelance</span>
+        <span class="exp-period">2021</span>
+      </div>
+      <div class="exp-row reveal" role="listitem">
+        <span class="exp-company">Coderhouse</span>
+        <span class="exp-role">Estudiante activo</span>
+        <span class="exp-period">2024 — Presente</span>
+      </div>
+      <div class="exp-row reveal" role="listitem">
+        <span class="exp-company">IES</span>
+        <span class="exp-role">Análisis de Sistemas</span>
+        <span class="exp-period">2025 — Presente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CERTIFICACIONES
+  ========================================================= -->
+  <section id="certificados" aria-label="Certificaciones">
+    <div class="cert-header reveal">
+      <p class="section-label">Formación</p>
+      <h2 class="section-title">Certificados</h2>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">Desarrollo Web Fullstack</h3>
+        <p class="cert-date">Jun 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">Carrera Frontend React</h3>
+        <p class="cert-date">Nov 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">React JS</h3>
+        <p class="cert-date">Nov 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">JavaScript</h3>
+        <p class="cert-date">Sep 2024</p>
+      </div>
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">UX/UI Design</h3>
+        <p class="cert-date">En curso — 2025</p>
+        <span class="cert-status">En curso</span>
+      </div>
+      <div class="cert-card reveal">
+        <p class="cert-issuer">Coderhouse</p>
+        <h3 class="cert-name">Python</h3>
+        <p class="cert-date">En curso — 2025</p>
+        <span class="cert-status">En curso</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACTO / ONLINE
+  ========================================================= -->
+  <section id="contacto" aria-label="Contacto">
+    <div class="contact-header reveal">
+      <p class="section-label">Disponible para trabajar</p>
+      <h2 class="section-title">Online</h2>
+    </div>
+
+    <div class="contact-list">
+      <div class="contact-row reveal">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">criadogonzalo@gmail.com</span>
+        <a href="mailto:criadogonzalo@gmail.com" class="contact-link" aria-label="Enviar email">Email →</a>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">gonzalocriado-dev</span>
+        <a href="https://linkedin.com/in/gonzalocriado-dev" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Ver perfil de LinkedIn">Ver perfil →</a>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-label">WhatsApp</span>
+        <span class="contact-value">+54 351 803-1033</span>
+        <a href="https://wa.me/543518031033" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Escribir por WhatsApp">Escribir →</a>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-label">Estudio</span>
+        <span class="contact-value">estudiodigital.org</span>
+        <a href="https://estudiodigital.org" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Ver Estudio Digital">Ver →</a>
+      </div>
+      <div class="contact-row reveal">
+        <span class="contact-label">Ubicación</span>
+        <span class="contact-value">Córdoba, Argentina</span>
+        <span class="contact-dash">—</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer aria-label="Pie de página">
+    <p class="footer-copy">© 2026 Gonzalo Criado — Córdoba, Argentina</p>
+    <span class="footer-bg-text" aria-hidden="true">GONZALO</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cursor.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

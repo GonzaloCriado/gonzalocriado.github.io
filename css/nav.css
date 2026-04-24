@@ -1,0 +1,219 @@
+/* =========================================================
+   TICKER / MARQUEE
+========================================================= */
+.ticker {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  position: relative;
+  z-index: 600;
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation: ticker-scroll 35s linear infinite;
+}
+
+.ticker-track span {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-right: 3rem;
+}
+
+.ticker-track span .sep {
+  color: var(--accent);
+  margin: 0 0.5rem;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  padding: 1.4rem 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease, top 0.15s ease;
+  /* top se setea dinámicamente via JS según altura del ticker */
+}
+
+nav.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================================================
+   NAV LOGO
+========================================================= */
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  transition: letter-spacing 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease;
+  opacity: 0;
+  animation: navFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+}
+
+.nav-logo:hover {
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   NAV LINKS — entrada stagger + hover center-out
+========================================================= */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links li {
+  opacity: 0;
+  animation: navFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.12s; }
+.nav-links li:nth-child(2) { animation-delay: 0.18s; }
+.nav-links li:nth-child(3) { animation-delay: 0.24s; }
+.nav-links li:nth-child(4) { animation-delay: 0.30s; }
+.nav-links li:nth-child(5) { animation-delay: 0.36s; }
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  transition: color 0.25s ease;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* underline que se expande desde el centro */
+.nav-links a::before,
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: var(--text);
+  width: 0;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-links a::before { right: 50%; }
+.nav-links a::after  { left: 50%; }
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+  width: 50%;
+}
+
+/* estado activo (scrollspy) */
+.nav-links a.active {
+  color: var(--text);
+}
+
+.nav-links a.active::before,
+.nav-links a.active::after {
+  width: 50%;
+  background: var(--accent);
+}
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--text);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-overlay a {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  color: var(--text);
+  font-weight: 700;
+  transition: color 0.2s ease, letter-spacing 0.3s ease;
+}
+
+.nav-overlay a:hover {
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+  .nav-links     { display: none; }
+  .nav-hamburger { display: flex; }
+
+  nav {
+    padding: 1.1rem 6vw;
+  }
+}
